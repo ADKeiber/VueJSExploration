@@ -13,7 +13,7 @@
       <h1 class="header font-bold text-7xl text-center">Expense Tracker</h1>
     </div>
     
-    <LoginModal v-if="loggedIn"></LoginModal>
+    <LoginModal v-if="!loggedIn"></LoginModal>
     <ExpenseDashboard v-else></ExpenseDashboard>
   </div>
 </template>
