@@ -8,7 +8,7 @@
       <h2 class="text-xl font-semibold">Login</h2>
     </div>
     
-    <form>
+    <form class="w-full max-w-100">
       <div class="mb-4">
         <label class="block text-gray-700">Email</label>
         <input type="email" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500" placeholder="Enter email">
