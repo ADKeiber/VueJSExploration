@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div id="expenseArea" class="size-9/10 rounded-lg">
+  <div id="expenseArea" class="size-9/10 rounded-lg shadow-xl">
     <h1 class="text-3xl font-bold underline">Expense Dashboard</h1>
   </div>
   
