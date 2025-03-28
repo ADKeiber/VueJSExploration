@@ -1,5 +1,12 @@
 <script setup>
-
+  import {ref} from 'vue'
+  const username = ref("")
+  const password = ref("")
+  
+  function login(){
+    console.log("Username: " + username.value + " password: " + password.value)
+    //TODO: connect to url to retreive JWT
+  }
 </script>
 
 <template>
@@ -11,16 +18,16 @@
     
     <form class="w-full max-w-100 h-4/6">
       <div class="mb-6 text-xl">
-        <label class="block text-gray-700">Email</label>
-        <input type="email" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500" placeholder="Enter email">
+        <label class="block text-gray-700">Username</label>
+        <input type="username" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500" placeholder="Enter Username" v-model="username">
       </div>
 
       <div class="mb-6 text-xl">
         <label class="block text-gray-700">Password</label>
-        <input type="password" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500" placeholder="Enter password">
+        <input type="password" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500" placeholder="Enter password" v-model="password">
       </div>
 
-      <button type="submit" class="w-full bg-slate-400 text-white py-2 rounded hover:bg-slate-500">
+      <button type="submit" class="w-full bg-slate-400 text-white py-2 rounded hover:bg-slate-500" @click="login">
         Login
       </button>
     </form>
