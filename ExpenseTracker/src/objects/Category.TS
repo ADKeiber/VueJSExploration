@@ -1,4 +1,4 @@
 export class Category {
-    value: String;
+    name: String;
     id: String;
 }
