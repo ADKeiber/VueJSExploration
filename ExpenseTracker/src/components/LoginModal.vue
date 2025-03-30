@@ -1,11 +1,19 @@
-<script setup>
+<script setup lang="ts">
   import {ref} from 'vue'
   const username = ref("")
   const password = ref("")
-  
+  const props = defineProps(["loggedIn", "jwtToken"]);
+  const emit = defineEmits(["update:loggedIn", "update:jwtToken"]);
+
   function login(){
     console.log("Username: " + username.value + " password: " + password.value)
     //TODO: connect to url to retreive JWT
+    if(username.value == "username" && password.value == "password"){
+      props.loggedIn.value = true
+      props.jwtToken.value = new JWT()//update to get an actual token 
+      emit("update:loggedIn",  props.loggedIn.value)
+      emit("update:jwtToken",  props.jwtToken.value)
+    }
   }
 </script>
 
