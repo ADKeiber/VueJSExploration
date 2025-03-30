@@ -1,7 +1,5 @@
 import { Category } from "./Category.ts";
 
-
-
 export class Expense {
     stringId: String;
     name: String;
