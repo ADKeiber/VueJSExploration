@@ -1,6 +1,4 @@
-class JWT {
-    properties = {
-        access_token: null,
-        refresh_token: null
-    }
+export class JWT {
+        access_token: null;
+        refresh_token: null;
 }

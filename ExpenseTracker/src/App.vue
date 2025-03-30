@@ -3,11 +3,15 @@
   import LoginModal from './components/LoginModal.vue'
   import ExpenseDashboard from './components/ExpenseDashboard.vue'
 
-  const loggedIn = ref(false)
-  const jwt = null
-
-  const validJWT = () => {
-    return jwt != null // update to check jwt validity
+  const jwt = ref(null)
+  const validJWT = ref(false)
+  
+  const getJWT = (data) => {
+    console.log(data)
+    jwt.value = data
+    if(jwt != null){
+      validJWT.value = true // need to validate 
+    }
   }
 </script>
 
@@ -17,7 +21,7 @@
       <h1 class="header font-bold text-7xl text-center">Expense Tracker</h1>
     </div>
     <div class="flex flex-col justify-center items-center h-5/6">
-      <LoginModal v-if="!validJWT()"></LoginModal>
+      <LoginModal v-if="!validJWT" @get-jwt="getJWT"></LoginModal>
       <ExpenseDashboard v-else></ExpenseDashboard>
     </div>
     
