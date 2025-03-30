@@ -13,3 +13,7 @@ body {
 .header { 
   font-style: italic;
 }
+
+#expenseArea {
+  background-image: linear-gradient(to right, rgba(0, 0.137, 1, 0.251), rgba(0,0,0,0),rgba(0, 0.137, 1, 0.251) );
+}
